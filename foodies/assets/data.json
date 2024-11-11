@@ -1,0 +1,26 @@
+[
+    {"name": "Crispy Chicken Burger", "image": "assets/teriyaki-burger.png"},
+    {"name": "Crispy Fried Chicken", "image": "assets/fried-chicken.png"},
+    {"name": "Salted Caramel\nFrappe", "image": "assets/salted-caramel.webp"},
+    {"name": "Pepperoni Pizza", "image": "assets/pizza.webp"},
+    {
+      "name": "Spicy Toppoki",
+      "image": "assets/china-food.webp",
+      "description": "A Korean classic made with \nchewy rice cakes.",
+      "quantity": "4"
+    },
+    {
+      "name": "Daal Cheese",
+      "image": "assets/china-food2.webp",
+      "description": "A unique twist melted cheese\nforextra creaminess. ",
+      "quantity": "1"
+    },
+    {
+      "name": "Family Plate",
+      "image": "assets/china-food3.webp",
+      "description": "A platter featuring a selection \nof family favorites",
+      "quantity": "3"
+      
+    }
+      ]
+  
