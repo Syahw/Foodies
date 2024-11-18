@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "name": "Grilled Salmon",
+      "price": "32.99",
+      "description": "Fresh salmon with lemon butter sauce and seasonal vegetables",
+      "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500",
+      "category": "ala_carte"
+    },
+    {
+      "id": 2,
+      "name": "Ribeye Steak",
+      "price": "45.99",
+      "description": "Premium aged beef with garlic mashed potatoes",
+      "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=500",
+      "category": "ala_carte"
+    },
+    {
+      "id": 3,
+      "name": "Chicken Marsala",
+      "price": "28.99",
+      "description": "Pan-seared chicken in mushroom wine sauce with pasta",
+      "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=500",
+      "category": "ala_carte"
+    },
+    {
+      "id": 4,
+      "name": "Seafood Pasta",
+      "price": "34.99",
+      "description": "Mixed seafood in creamy white wine sauce",
+      "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=500",
+      "category": "ala_carte"
+    }
+  ]

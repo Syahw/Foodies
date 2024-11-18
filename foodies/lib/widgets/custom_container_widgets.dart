@@ -70,3 +70,38 @@ class MyContainer extends StatelessWidget {
     );
   }
 }
+
+class MyTopContainer extends StatelessWidget {
+  final double height;
+  final double width;
+  final double borderRadiusAll;
+  final Color color;
+  final Widget? child;
+  final EdgeInsets padding;
+
+  const MyTopContainer({
+    Key? key,
+    this.height = 150,
+    this.width = 450,
+    this.borderRadiusAll = 2,
+    this.color = Colors.white,
+    this.child,
+    this.padding = const EdgeInsets.all(8.0),
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: height,
+      decoration: BoxDecoration(
+          color: color,
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
+          ),
+          border: Border.all(width: 1, color: Colors.grey)),
+      child: child,
+    );
+  }
+}

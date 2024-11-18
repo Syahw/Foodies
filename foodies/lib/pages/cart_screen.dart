@@ -39,7 +39,7 @@ class _CartScreenState extends State<CartScreen> {
         automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 39, 180, 112),
         title: const TextMedium(
-          text: 'Cart Screen',
+          text: 'Cart Page',
           color: Colors.white,
           fontSize: 20,
         ),

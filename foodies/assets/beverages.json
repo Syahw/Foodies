@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "name": "Iced Latte",
+      "price": "12.99",
+      "description": "Smooth espresso with cold milk and ice",
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&auto=format&fit=crop&q=60",
+      "category": "beverages"
+    },
+    {
+      "id": 2,
+      "name": "Fresh Orange Juice",
+      "price": "8.99",
+      "description": "Freshly squeezed orange juice",
+      "image": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&auto=format&fit=crop&q=60",
+      "category": "beverages"
+    },
+    {
+      "id": 3,
+      "name": "Matcha Green Tea",
+      "price": "13.99",
+      "description": "Premium Japanese matcha tea",
+      "image": "https://www.justonecookbook.com/wp-content/uploads/2022/12/Matcha-Latte-4598-I-1-500x375.jpg",
+      "category": "beverages"
+    },
+    {
+      "id": 4,
+      "name": "Chocolate Milkshake",
+      "price": "14.99",
+      "description": "Rich chocolate shake with whipped cream",
+      "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500&auto=format&fit=crop&q=60",
+      "category": "beverages"
+    },
+    {
+      "id": 5,
+      "name": "Strawberry Smoothie",
+      "price": "11.99",
+      "description": "Fresh strawberries blended with yogurt",
+      "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=60",
+      "category": "beverages"
+    },
+    {
+      "id": 6,
+      "name": "Bubble Milk Tea",
+      "price": "10.99",
+      "description": "Classic milk tea with tapioca pearls",
+      "image": "https://images.unsplash.com/photo-1558857563-b371033873b8?w=500&auto=format&fit=crop&q=60",
+      "category": "beverages"
+    }
+  ]

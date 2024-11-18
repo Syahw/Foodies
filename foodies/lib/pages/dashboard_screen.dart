@@ -72,252 +72,249 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ))
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const Padding(
-            padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
-            child: MyCard(
-              height: 145,
-              color: Color.fromARGB(255, 39, 180, 112),
-              width: double.infinity,
-              child: Stack(
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(15, 20, 0, 0),
-                        child: TextMedium(
-                          text: 'SPECIAL OFFERS !',
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Padding(
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+              child: MyCard(
+                height: 145,
+                color: Color.fromARGB(255, 39, 180, 112),
+                width: double.infinity,
+                child: Stack(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(15, 20, 0, 0),
+                          child: TextMedium(
+                            text: 'SPECIAL OFFERS !',
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  MySpacing(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 10, 5, 0),
-                        child: Image(
-                            image: AssetImage('assets/teriyaki-burger.png')),
-                      )
-                    ],
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(15, 0, 0, 40),
-                        child: TextSmall(
-                          text:
-                              'Get 20% off on our delectable\nfamily-sized buckets of \ncrispy chicken burger.',
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
+                      ],
+                    ),
+                    MySpacing(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(0, 10, 5, 0),
+                          child: Image(
+                              image: AssetImage('assets/teriyaki-burger.png')),
+                        )
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(15, 0, 0, 40),
+                          child: TextSmall(
+                            text:
+                                'Get 20% off on our delectable\nfamily-sized buckets of \ncrispy chicken burger.',
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(
-                CupertinoIcons.ellipsis,
-                size: 40,
-                color: Color.fromARGB(255, 39, 180, 112),
-              )
-            ],
-          ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                child: Icon(
-                  LucideIcons.star,
-                  size: 20,
-                ),
-              ),
-              MySpacing(
-                width: 10,
-              ),
-              TextMedium(text: 'Today\'s Hot Item'),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    width: 250,
-                    height: 150,
-                    child: jsonData.isEmpty
-                        ? Center(child: CircularProgressIndicator())
-                        : ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            itemCount: jsonData.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              var item = jsonData[index];
-                              return MyCard(
-                                color: const Color.fromARGB(255, 39, 180, 112),
-                                height: 120,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                width: 120,
-                                child: Center(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      SizedBox(
-                                        height: 90,
-                                        width: 120,
-                                        child: Image(
-                                            image: AssetImage(item['image'])),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            10, 0, 10, 0),
-                                        child: TextSmall(
-                                          text: item['name'],
-                                          color: Colors.white,
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(
+                  CupertinoIcons.ellipsis,
+                  size: 40,
+                  color: Color.fromARGB(255, 39, 180, 112),
+                )
+              ],
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                  child: Icon(
+                    LucideIcons.star,
+                    size: 20,
                   ),
                 ),
-              ),
-            ],
-          ),
-          MySpacing(
-            height: 10,
-          ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              MySpacing(
-                width: 20,
-              ),
-              TextMedium(text: 'Your Recent Purchase'),
-            ],
-          ),
-          Expanded(
-            child: Column(
+                MySpacing(
+                  width: 10,
+                ),
+                TextMedium(text: 'Today\'s Hot Item'),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Expanded(
-                  child: ListView.builder(
-                    itemCount: json5.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      var foods = json5[index];
-                      return Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(
-                              8), // Adjust radius as needed
-                          child: MyCard(
-                            color: const Color.fromARGB(255, 39, 180, 112),
-                            height: 80, // Increase height for demo purposes
-                            width: double.infinity,
-                            child: Stack(
-                              children: [
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(10, 10, 10, 0),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      // Image Section
-                                      Image(
-                                        image: AssetImage(foods['image']),
-                                        width: 60,
-                                        height: 60,
-                                        fit: BoxFit.cover,
-                                      ),
-                                      const SizedBox(width: 10),
-
-                                      Expanded(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                TextMedium(
-                                                  text: foods['name'],
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Colors.white,
-                                                  fontSize: 17,
-                                                ),
-                                                Icon(
-                                                  LucideIcons.heart,
-                                                  size: 20,
-                                                  color: Colors.white,
-                                                ),
-                                              ],
-                                            ),
-                                            TextSmall(
-                                              text: foods['description'],
-                                              color: Colors.white,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      width: 250,
+                      height: 150,
+                      child: jsonData.isEmpty
+                          ? Center(child: CircularProgressIndicator())
+                          : ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: jsonData.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                var item = jsonData[index];
+                                return MyCard(
+                                  color: const Color.fromARGB(255, 39, 180, 112),
+                                  height: 120,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
-                                ),
-                                Positioned(
-                                  bottom: 0,
-                                  right: 0,
-                                  child: InkWell(
-                                    onTap: () {},
-                                    child: Container(
-                                      height: 35,
-                                      padding: const EdgeInsets.all(8),
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(6),
-                                      ),
-                                      child: TextSmall(
-                                        text: 'Add To Cart',
-                                        fontWeight: FontWeight.w500,
-                                      ),
+                                  width: 120,
+                                  child: Center(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        SizedBox(
+                                          height: 90,
+                                          width: 120,
+                                          child: Image(
+                                              image: AssetImage(item['image'])),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.fromLTRB(
+                                              10, 0, 10, 0),
+                                          child: TextSmall(
+                                            text: item['name'],
+                                            color: Colors.white,
+                                          ),
+                                        )
+                                      ],
                                     ),
                                   ),
-                                ),
-                              ],
+                                );
+                              },
                             ),
-                          ),
-                        ),
-                      );
-                    },
+                    ),
                   ),
                 ),
               ],
             ),
-          )
-        ],
+            MySpacing(
+              height: 10,
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                MySpacing(
+                  width: 20,
+                ),
+                TextMedium(text: 'Your Recent Purchase'),
+              ],
+            ),
+            SizedBox(
+              height: 300,
+              child: ListView.builder(
+                itemCount: json5.length,
+                itemBuilder: (BuildContext context, int index) {
+                  var foods = json5[index];
+                  return Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(
+                          8), // Adjust radius as needed
+                      child: MyCard(
+                        color: const Color.fromARGB(255, 39, 180, 112),
+                        height: 80, // Increase height for demo purposes
+                        width: double.infinity,
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                              child: Row(
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                children: [
+                                  // Image Section
+                                  Image(
+                                    image: AssetImage(foods['image']),
+                                    width: 60,
+                                    height: 60,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  const SizedBox(width: 10),
+
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment
+                                                  .spaceBetween,
+                                          children: [
+                                            TextMedium(
+                                              text: foods['name'],
+                                              fontWeight: FontWeight.w600,
+                                              color: Colors.white,
+                                              fontSize: 17,
+                                            ),
+                                            Icon(
+                                              LucideIcons.heart,
+                                              size: 20,
+                                              color: Colors.white,
+                                            ),
+                                          ],
+                                        ),
+                                        TextSmall(
+                                          text: foods['description'],
+                                          color: Colors.white,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Positioned(
+                              bottom: 0,
+                              right: 0,
+                              child: InkWell(
+                                onTap: () {},
+                                child: Container(
+                                  height: 35,
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: TextSmall(
+                                    text: 'Add To Cart',
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
